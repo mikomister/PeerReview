@@ -1,0 +1,41 @@
+mister@PC:~/Рабочий стол/ASP/PeerReview/PeerReview$ dotnet ef database update
+: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
+      User profile is available. Using '/home/mister/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.0.2-rtm-10011 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+System.Data.SqlClient.SqlException (0x80131904): Cannot access Kerberos ticket. Ensure Kerberos has been initialized with 'kinit'.
+ErrorCode=InternalError, Exception=Interop+NetSecurityNative+GssApiException: GSSAPI operation failed with error - An invalid status code was supplied (SPNEGO cannot find mechanisms to negotiate).
+   at System.Net.Security.NegotiateStreamPal.GssInitSecurityContext(SafeGssContextHandle& context, SafeGssCredHandle credential, Boolean isNtlm, SafeGssNameHandle targetName, GssFlags inFlags, Byte[] buffer, Byte[]& outputBuffer, UInt32& outFlags, Int32& isNtlmUsed)
+   at System.Net.Security.NegotiateStreamPal.EstablishSecurityContext(SafeFreeNegoCredentials credential, SafeDeleteContext& context, String targetName, ContextFlagsPal inFlags, SecurityBuffer inputBuffer, SecurityBuffer outputBuffer, ContextFlagsPal& outFlags)
+   at System.Data.SqlClient.SNI.SNIProxy.GenSspiClientContext(SspiClientContextStatus sspiClientContextStatus, Byte[] receivedBuff, Byte[]& sendBuff, Byte[] serverName)
+   at System.Data.SqlClient.SNI.TdsParserStateObjectManaged.GenerateSspiClientContext(Byte[] receivedBuff, UInt32 receivedLength, Byte[]& sendBuff, UInt32& sendLength, Byte[] _sniSpnBuffer)
+   at System.Data.SqlClient.TdsParser.SNISSPIData(Byte[] receivedBuff, UInt32 receivedLength, Byte[]& sendBuff, UInt32& sendLength)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, Func`2 operation, Func`2 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:3a01fca0-c785-4484-9f07-dd7ee690b399
+Cannot access Kerberos ticket. Ensure Kerberos has been initialized with 'kinit'.
+ErrorCode=InternalError, Exception=Interop+NetSecurityNative+GssApiException: GSSAPI operation failed with error - An invalid status code was supplied (SPNEGO cannot find mechanisms to negotiate).
+   at System.Net.Security.NegotiateStreamPal.GssInitSecurityContext(SafeGssContextHandle& context, SafeGssCredHandle credential, Boolean isNtlm, SafeGssNameHandle targetName, GssFlags inFlags, Byte[] buffer, Byte[]& outputBuffer, UInt32& outFlags, Int32& isNtlmUsed)
+   at System.Net.Security.NegotiateStreamPal.EstablishSecurityContext(SafeFreeNegoCredentials credential, SafeDeleteContext& context, String targetName, ContextFlagsPal inFlags, SecurityBuffer inputBuffer, SecurityBuffer outputBuffer, ContextFlagsPal& outFlags)
+   at System.Data.SqlClient.SNI.SNIProxy.GenSspiClientContext(SspiClientContextStatus sspiClientContextStatus, Byte[] receivedBuff, Byte[]& sendBuff, Byte[] serverName)
+   at System.Data.SqlClient.SNI.TdsParserStateObjectManaged.GenerateSspiClientContext(Byte[] receivedBuff, UInt32 receivedLength, Byte[]& sendBuff, UInt32& sendLength, Byte[] _sniSpnBuffer)
+   at System.Data.SqlClient.TdsParser.SNISSPIData(Byte[] receivedBuff, UInt32 receivedLength, Byte[]& sendBuff, UInt32& sendLength)
