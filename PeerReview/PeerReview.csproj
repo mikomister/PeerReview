@@ -13,4 +13,11 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.2" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services" />
+    <Folder Include="ViewModels\ManageViewModel" />
+    <Folder Include="ViewModels\ReviewViewModel" />
+    <Folder Include="Views\Manage" />
+    <Folder Include="Views\Review" />
+  </ItemGroup>
 </Project>

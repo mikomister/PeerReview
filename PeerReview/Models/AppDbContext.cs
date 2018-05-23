@@ -1,18 +1,20 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace PeerReview.Models
 {
     public class AppDbContext : IdentityDbContext<User>
     {
+        public DbSet<Invite> Invites { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Submission> Submissions { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
         }
 
-        public DbSet<Invite> Invites;
-        public DbSet<Review> Reviews;
-        public DbSet<Submission> Submissions;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,21 +1,22 @@
-﻿@model PeerReview.ViewModels.RegisterViewModel
+﻿@using PeerReview.ViewModels.AccountViewModels
+@model PeerReview.ViewModels.AccountViewModels.RegisterViewModel
 
 @{
-    ViewBag.Title = "Регистрация";
+    ViewData["Title"] = "Регистрация";
     Layout = "_Layout";
 }
 <h2>Регистрация нового пользователя | Только по инвайтам</h2>
 <form method="post" asp-controller="Account" asp-action="Register">
     <div asp-validation-summary="ModelOnly"></div>
     <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
         <label asp-for="Invite"></label><br />
         <input asp-for="Invite" />
         <span asp-validation-for="Invite"></span>
+    </div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
     </div>
     <div>
         <label asp-for="Password"></label><br />

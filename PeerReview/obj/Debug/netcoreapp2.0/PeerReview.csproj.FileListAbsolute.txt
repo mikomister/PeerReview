@@ -1,0 +1,11 @@
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/bin/Debug/netcoreapp2.0/PeerReview.deps.json
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/bin/Debug/netcoreapp2.0/PeerReview.runtimeconfig.json
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/bin/Debug/netcoreapp2.0/PeerReview.runtimeconfig.dev.json
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/bin/Debug/netcoreapp2.0/PeerReview.dll
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/bin/Debug/netcoreapp2.0/PeerReview.pdb
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/obj/Debug/netcoreapp2.0/PeerReview.csprojResolveAssemblyReference.cache
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/obj/Debug/netcoreapp2.0/PeerReview.csproj.CoreCompileInputs.cache
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/obj/Debug/netcoreapp2.0/PeerReview.AssemblyInfoInputs.cache
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/obj/Debug/netcoreapp2.0/PeerReview.AssemblyInfo.cs
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/obj/Debug/netcoreapp2.0/PeerReview.dll
+/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/obj/Debug/netcoreapp2.0/PeerReview.pdb

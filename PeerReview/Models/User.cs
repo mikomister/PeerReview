@@ -12,12 +12,7 @@ namespace PeerReview.Models
         
         [NotMapped]
         private const double Balancer = 100000;
-
-        public User(int countInvites = 3)
-        {
-            CountInvites = countInvites;
-        }
-
+        
         public List<Submission> Submissions;
         public List<Review> Reviews;
         

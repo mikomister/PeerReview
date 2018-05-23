@@ -7,7 +7,10 @@ namespace PeerReview.Models
 {
     public class Invite
     {
-        [Key] [StringLength(64)] public string InviteCode { get; }
+        [Key] 
+        public int Id { get; set; }
+        
+        public string InviteCode { get; }
 
         public Invite()
         {

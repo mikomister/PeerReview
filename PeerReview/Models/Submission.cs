@@ -8,7 +8,7 @@ namespace PeerReview.Models
     {
         [Key]
         public int Id { get; set; }
-        [MaxLength(256)]
+        [MaxLength(128)]
         public string Title;
         [MaxLength(4096)]
         public string Code { get; set; }

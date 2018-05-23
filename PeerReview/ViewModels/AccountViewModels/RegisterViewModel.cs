@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PeerReview.ViewModels
+namespace PeerReview.ViewModels.AccountViewModels
 {
     public class RegisterViewModel
     {

@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PeerReview@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.8">
+    <root id="1">
+      <ServerVersion>10.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="PeerReview">
+      <ObjectId>16385</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13015</ObjectId>
+    </database>
+    <role id="4" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="5" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="10" parent="1" name="root">
+      <ObjectId>16384</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <schema id="11" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-05-23.07:02:05.946</IntrospectionTimestamp>
+      <IntrospectionStateNumber>581</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="12" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="information_schema">
+      <ObjectId>12725</ObjectId>
+    </schema>
+    <sequence id="17" parent="11" name="Invites_Id_seq">
+      <ObjectId>16595</ObjectId>
+      <StateNumber>581</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="18" parent="11" name="Reviews_Id_seq">
+      <ObjectId>16627</ObjectId>
+      <StateNumber>581</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="19" parent="11" name="Submissions_Id_seq">
+      <ObjectId>16611</ObjectId>
+      <StateNumber>581</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="20" parent="11" name="AspNetRoleClaims_Id_seq">
+      <ObjectId>16501</ObjectId>
+      <StateNumber>576</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="21" parent="11" name="AspNetUserClaims_Id_seq">
+      <ObjectId>16517</ObjectId>
+      <StateNumber>576</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="22" parent="11" name="AspNetRoleClaims">
+      <ObjectId>16503</ObjectId>
+      <StateNumber>576</StateNumber>
+    </table>
+    <table id="23" parent="11" name="AspNetRoles">
+      <ObjectId>16485</ObjectId>
+      <StateNumber>576</StateNumber>
+    </table>
+    <table id="24" parent="11" name="AspNetUserClaims">
+      <ObjectId>16519</ObjectId>
+      <StateNumber>576</StateNumber>
+    </table>
+    <table id="25" parent="11" name="AspNetUserLogins">
+      <ObjectId>16533</ObjectId>
+      <StateNumber>576</StateNumber>
+    </table>
+    <table id="26" parent="11" name="AspNetUserRoles">
+      <ObjectId>16546</ObjectId>
+      <StateNumber>576</StateNumber>
+    </table>
+    <table id="27" parent="11" name="AspNetUserTokens">
+      <ObjectId>16564</ObjectId>
+      <StateNumber>576</StateNumber>
+    </table>
+    <table id="28" parent="11" name="AspNetUsers">
+      <ObjectId>16493</ObjectId>
+      <StateNumber>581</StateNumber>
+    </table>
+    <table id="29" parent="11" name="Invites">
+      <ObjectId>16597</ObjectId>
+      <StateNumber>581</StateNumber>
+    </table>
+    <table id="30" parent="11" name="Reviews">
+      <ObjectId>16629</ObjectId>
+      <StateNumber>581</StateNumber>
+    </table>
+    <table id="31" parent="11" name="Submissions">
+      <ObjectId>16613</ObjectId>
+      <StateNumber>581</StateNumber>
+    </table>
+    <table id="32" parent="11" name="__EFMigrationsHistory">
+      <ObjectId>16480</ObjectId>
+      <StateNumber>575</StateNumber>
+    </table>
+    <column id="33" parent="22" name="Id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;AspNetRoleClaims_Id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>AspNetRoleClaims_Id_seq</SequenceName>
+    </column>
+    <column id="34" parent="22" name="ClaimType">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="35" parent="22" name="ClaimValue">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="36" parent="22" name="RoleId">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="37" parent="22" name="PK_AspNetRoleClaims">
+      <ObjectId>16510</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="38" parent="22" name="IX_AspNetRoleClaims_RoleId">
+      <ObjectId>16577</ObjectId>
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="39" parent="22" name="PK_AspNetRoleClaims">
+      <ObjectId>16511</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_AspNetRoleClaims</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="22" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+      <ObjectId>16512</ObjectId>
+      <ColNames>RoleId</ColNames>
+      <RefTableId>16485</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetRoles</RefTableName>
+      <RefKeyName>PK_AspNetRoles</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="41" parent="23" name="Id">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="42" parent="23" name="ConcurrencyStamp">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="43" parent="23" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="23" name="NormalizedName">
+      <Position>4</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="45" parent="23" name="PK_AspNetRoles">
+      <ObjectId>16491</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="46" parent="23" name="RoleNameIndex">
+      <ObjectId>16578</ObjectId>
+      <ColNames>NormalizedName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="23" name="PK_AspNetRoles">
+      <ObjectId>16492</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_AspNetRoles</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="48" parent="24" name="Id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;AspNetUserClaims_Id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>AspNetUserClaims_Id_seq</SequenceName>
+    </column>
+    <column id="49" parent="24" name="ClaimType">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="50" parent="24" name="ClaimValue">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="51" parent="24" name="UserId">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="52" parent="24" name="PK_AspNetUserClaims">
+      <ObjectId>16526</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="53" parent="24" name="IX_AspNetUserClaims_UserId">
+      <ObjectId>16579</ObjectId>
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="54" parent="24" name="PK_AspNetUserClaims">
+      <ObjectId>16527</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_AspNetUserClaims</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="24" name="FK_AspNetUserClaims_AspNetUsers_UserId">
+      <ObjectId>16528</ObjectId>
+      <ColNames>UserId</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="56" parent="25" name="LoginProvider">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="57" parent="25" name="ProviderKey">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="58" parent="25" name="ProviderDisplayName">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="59" parent="25" name="UserId">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="60" parent="25" name="PK_AspNetUserLogins">
+      <ObjectId>16539</ObjectId>
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="61" parent="25" name="IX_AspNetUserLogins_UserId">
+      <ObjectId>16580</ObjectId>
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="62" parent="25" name="PK_AspNetUserLogins">
+      <ObjectId>16540</ObjectId>
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <UnderlyingIndexName>PK_AspNetUserLogins</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="63" parent="25" name="FK_AspNetUserLogins_AspNetUsers_UserId">
+      <ObjectId>16541</ObjectId>
+      <ColNames>UserId</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="64" parent="26" name="UserId">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="65" parent="26" name="RoleId">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="66" parent="26" name="PK_AspNetUserRoles">
+      <ObjectId>16552</ObjectId>
+      <ColNames>UserId
+RoleId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="67" parent="26" name="IX_AspNetUserRoles_RoleId">
+      <ObjectId>16581</ObjectId>
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="68" parent="26" name="PK_AspNetUserRoles">
+      <ObjectId>16553</ObjectId>
+      <ColNames>UserId
+RoleId</ColNames>
+      <UnderlyingIndexName>PK_AspNetUserRoles</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="69" parent="26" name="FK_AspNetUserRoles_AspNetUsers_UserId">
+      <ObjectId>16559</ObjectId>
+      <ColNames>UserId</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="70" parent="26" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
+      <ObjectId>16554</ObjectId>
+      <ColNames>RoleId</ColNames>
+      <RefTableId>16485</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetRoles</RefTableName>
+      <RefKeyName>PK_AspNetRoles</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="71" parent="27" name="UserId">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="72" parent="27" name="LoginProvider">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="73" parent="27" name="Name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="74" parent="27" name="Value">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="75" parent="27" name="PK_AspNetUserTokens">
+      <ObjectId>16570</ObjectId>
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="27" name="PK_AspNetUserTokens">
+      <ObjectId>16571</ObjectId>
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <UnderlyingIndexName>PK_AspNetUserTokens</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="77" parent="27" name="FK_AspNetUserTokens_AspNetUsers_UserId">
+      <ObjectId>16572</ObjectId>
+      <ColNames>UserId</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="78" parent="28" name="Id">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="79" parent="28" name="AccessFailedCount">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="80" parent="28" name="ConcurrencyStamp">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="81" parent="28" name="Email">
+      <Position>4</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="82" parent="28" name="EmailConfirmed">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="83" parent="28" name="LockoutEnabled">
+      <Position>6</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="84" parent="28" name="LockoutEnd">
+      <Position>7</Position>
+      <DataType>timestamp with time zone|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="85" parent="28" name="NormalizedEmail">
+      <Position>8</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="86" parent="28" name="NormalizedUserName">
+      <Position>9</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="87" parent="28" name="PasswordHash">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="88" parent="28" name="PhoneNumber">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="89" parent="28" name="PhoneNumberConfirmed">
+      <Position>12</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="90" parent="28" name="SecurityStamp">
+      <Position>13</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="91" parent="28" name="TwoFactorEnabled">
+      <Position>14</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="92" parent="28" name="UserName">
+      <Position>15</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="93" parent="28" name="CountInvites">
+      <Position>16</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>580</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="94" parent="28" name="PK_AspNetUsers">
+      <ObjectId>16499</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="95" parent="28" name="UserNameIndex">
+      <ObjectId>16583</ObjectId>
+      <ColNames>NormalizedUserName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="96" parent="28" name="EmailIndex">
+      <ObjectId>16582</ObjectId>
+      <ColNames>NormalizedEmail</ColNames>
+    </index>
+    <key id="97" parent="28" name="PK_AspNetUsers">
+      <ObjectId>16500</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_AspNetUsers</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="98" parent="29" name="Id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Invites_Id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>Invites_Id_seq</SequenceName>
+    </column>
+    <column id="99" parent="29" name="UserId">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="100" parent="29" name="UserId1">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>581</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="101" parent="29" name="PK_Invites">
+      <ObjectId>16604</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="102" parent="29" name="IX_Invites_UserId1">
+      <ObjectId>16648</ObjectId>
+      <ColNames>UserId1</ColNames>
+    </index>
+    <key id="103" parent="29" name="PK_Invites">
+      <ObjectId>16605</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Invites</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="104" parent="29" name="FK_Invites_AspNetUsers_UserId1">
+      <ObjectId>16606</ObjectId>
+      <ColNames>UserId1</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="105" parent="30" name="Id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Reviews_Id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>Reviews_Id_seq</SequenceName>
+    </column>
+    <column id="106" parent="30" name="Assessment">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="107" parent="30" name="AuthorId">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="108" parent="30" name="AuthorId1">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>581</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="109" parent="30" name="Opinion">
+      <Position>5</Position>
+      <DataType>varchar(512)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="110" parent="30" name="SubmissionId">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="111" parent="30" name="PK_Reviews">
+      <ObjectId>16636</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="112" parent="30" name="IX_Reviews_AuthorId1">
+      <ObjectId>16649</ObjectId>
+      <ColNames>AuthorId1</ColNames>
+    </index>
+    <index id="113" parent="30" name="IX_Reviews_SubmissionId">
+      <ObjectId>16650</ObjectId>
+      <ColNames>SubmissionId</ColNames>
+    </index>
+    <key id="114" parent="30" name="PK_Reviews">
+      <ObjectId>16637</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Reviews</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="115" parent="30" name="FK_Reviews_AspNetUsers_AuthorId1">
+      <ObjectId>16638</ObjectId>
+      <ColNames>AuthorId1</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="116" parent="30" name="FK_Reviews_Submissions_SubmissionId">
+      <ObjectId>16643</ObjectId>
+      <ColNames>SubmissionId</ColNames>
+      <RefTableId>16613</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>Submissions</RefTableName>
+      <RefKeyName>PK_Submissions</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="117" parent="31" name="Id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Submissions_Id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>Submissions_Id_seq</SequenceName>
+    </column>
+    <column id="118" parent="31" name="AuthorId">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>581</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="119" parent="31" name="AuthorId1">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>581</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="120" parent="31" name="Code">
+      <Position>4</Position>
+      <DataType>varchar(4096)|0s</DataType>
+      <StateNumber>581</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="121" parent="31" name="PK_Submissions">
+      <ObjectId>16620</ObjectId>
+      <ColNames>Id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="122" parent="31" name="IX_Submissions_AuthorId1">
+      <ObjectId>16651</ObjectId>
+      <ColNames>AuthorId1</ColNames>
+    </index>
+    <key id="123" parent="31" name="PK_Submissions">
+      <ObjectId>16621</ObjectId>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Submissions</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="124" parent="31" name="FK_Submissions_AspNetUsers_AuthorId1">
+      <ObjectId>16622</ObjectId>
+      <ColNames>AuthorId1</ColNames>
+      <RefTableId>16493</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefKeyName>PK_AspNetUsers</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="125" parent="32" name="MigrationId">
+      <Position>1</Position>
+      <DataType>varchar(150)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>575</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="126" parent="32" name="ProductVersion">
+      <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>575</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="127" parent="32" name="PK___EFMigrationsHistory">
+      <ObjectId>16483</ObjectId>
+      <ColNames>MigrationId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="128" parent="32" name="PK___EFMigrationsHistory">
+      <ObjectId>16484</ObjectId>
+      <ColNames>MigrationId</ColNames>
+      <UnderlyingIndexName>PK___EFMigrationsHistory</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
