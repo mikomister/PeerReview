@@ -18,6 +18,5 @@
     <Folder Include="ViewModels\ManageViewModel" />
     <Folder Include="ViewModels\ReviewViewModel" />
     <Folder Include="Views\Manage" />
-    <Folder Include="Views\Review" />
   </ItemGroup>
 </Project>

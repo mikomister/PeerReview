@@ -1,10 +1,49 @@
-﻿@model System.Collections.Generic.List<PeerReview.Models.Submission>
+﻿@model IEnumerable<PeerReview.Models.Submission>
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<
-
 <h2>Your Submissions:</h2>
+
+
+@{
+        if (Model != null)
+        {
+            <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Task name</td>
+                    <td>Counts of Review</td>
+                    <td>Average Assessment</td>
+                </tr>
+                </thead>
+                <tbody>
+                for (var i = 0; i < Model.Count; i++)
+                {
+                <tr>
+                    <td>i</td>
+                    <td>Model[i].Task.Title</td>
+                    <td>Model[i].Reviews.Count</td>
+                    <td>Model[i].AverageAssessment</td>
+                </tr>
+                }
+                </tbody>
+            </table>
+            </div>
+        }
+        else
+        {
+            <p>You don't have Submissions</p>
+        }
+}
+
+<form method="GET" asp-controller="Submission" asp-action="Create"> 
+    <div> 
+        <button type="submit" class="btn btn-success">Создать решение</button> 
+    </div> 
+</form>
+

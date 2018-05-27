@@ -8,8 +8,6 @@ namespace PeerReview.Models
     {
         [Key]
         public int Id { get; set; }
-        [MaxLength(128)]
-        public string Title;
         [MaxLength(4096)]
         public string Code { get; set; }
 
@@ -22,6 +20,7 @@ namespace PeerReview.Models
         
         public int AuthorId { get; set; }
         public User Author { get; set; }
+        public Task Task { get; set; }
         
     }
 }

@@ -9,6 +9,7 @@
           <e p="HomeController.cs" t="Include" />
           <e p="ManageController.cs" t="Include" />
           <e p="ReviewController.cs" t="Include" />
+          <e p="RolesController.cs" t="Include" />
           <e p="SubmissionController.cs" t="Include" />
         </e>
         <e p="Extensions" t="Include">
@@ -26,6 +27,8 @@
           <e p="20180523033203_Models.cs" t="Include" />
           <e p="20180523035809_UpdateUser.Designer.cs" t="Include" />
           <e p="20180523035809_UpdateUser.cs" t="Include" />
+          <e p="20180523090113_AddTask123.Designer.cs" t="Include" />
+          <e p="20180523090113_AddTask123.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -33,6 +36,7 @@
           <e p="Invite.cs" t="Include" />
           <e p="Review.cs" t="Include" />
           <e p="Submission.cs" t="Include" />
+          <e p="Task.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="PeerReview.csproj" t="IncludeRecursive" />
@@ -48,6 +52,7 @@
             <e p="RegisterViewModel.cs" t="Include" />
             <e p="ResetPasswordViewModel.cs" t="Include" />
           </e>
+          <e p="ChangeRoleViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="ManageViewModel" t="Include">
             <e p="ChangePasswordViewModel.cs" t="Include" />
@@ -93,19 +98,28 @@
             <e p="_StatusMessage.cshtml" t="Include" />
             <e p="_ViewImports.cshtml" t="Include" />
           </e>
-          <e p="Review" t="Include" />
+          <e p="Review" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Roles" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="UserList.cshtml" t="Include" />
+            <e p="UserListcshtml.cshtml" t="Include" />
+          </e>
           <e p="Shared" t="Include">
-            <e p="Error (2).cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
           <e p="Submission" t="Include">
+            <e p="Create.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="_ViewImports.cshtml" t="Include" />
-          <e p="_ViewStart (2).cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
         </e>
         <e p="appsettings.Development.json" t="Include" />

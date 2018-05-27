@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PeerReview.Models;
+using PeerReview.Services;
 
 namespace PeerReview
 {
@@ -30,6 +31,8 @@ namespace PeerReview
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddTransient<IEmailSender, EmailSender>();
             
             services.AddMvc();
         }

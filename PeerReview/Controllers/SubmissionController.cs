@@ -7,7 +7,7 @@ using PeerReview.ViewModels.SubmissionViewModel;
 
 namespace PeerReview.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="student")]
     public class SubmissionController : Controller
     {
         
@@ -20,7 +20,7 @@ namespace PeerReview.Controllers
         }
         
         [HttpGet]
-        public IActionResult Index(AppDbContext)
+        public IActionResult Index()
         {
             var user = _db.Users.FirstOrDefault( u => u.Id==_userManager.GetUserId(User));
             return View(user.Submissions);
@@ -29,8 +29,7 @@ namespace PeerReview.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return
-                View();
+            return View();
         }
         
         [HttpPost]
@@ -38,7 +37,7 @@ namespace PeerReview.Controllers
         {
             if (ModelState.IsValid)
             {
-                Submission submission = new Submission { Title = model.Title, Code = model.Code };
+                Submission submission = new Submission { Code = model.Code };
                 return RedirectToAction("Index", "Submission");
             }
             return View();

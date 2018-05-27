@@ -9,6 +9,7 @@ namespace PeerReview.Models
         public DbSet<Invite> Invites { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Submission> Submissions { get; set; }
+        public DbSet<Task> Tasks { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
