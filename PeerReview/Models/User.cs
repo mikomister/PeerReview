@@ -22,5 +22,6 @@ namespace PeerReview.Models
             var r = Reviews?.Count ?? 0;
             return r-s + r/Balancer;
         }
+        
     }
 }

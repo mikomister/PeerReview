@@ -1,0 +1,77 @@
+2018-05-29T13:29:01.7145692+03:00 0HLE59RVCR1FS:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-05-29T13:29:02.2562711+03:00 0HLE59RVCR1FS:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:29:02.4506924+03:00 0HLE59RVCR1FS:00000001 [INF] Executing action method "PeerReview.Controllers.HomeController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:29:06.2988952+03:00 0HLE59RVCR1FS:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-05-29T13:29:08.5965330+03:00 0HLE59RVCR1FS:00000001 [INF] Executed action "PeerReview.Controllers.HomeController.Index (PeerReview)" in 6152.8748ms (afa2e885)
+2018-05-29T13:29:08.6154588+03:00 0HLE59RVCR1FS:00000001 [INF] Request finished in 6929.3432ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:29:24.3032312+03:00 0HLE59RVCR1FS:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Submission   (ca22a1cb)
+2018-05-29T13:29:24.3279140+03:00 0HLE59RVCR1FS:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:29:24.3927570+03:00 0HLE59RVCR1FS:00000002 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:29:24.3979303+03:00 0HLE59RVCR1FS:00000002 [INF] Executing action method "PeerReview.Controllers.SubmissionController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:29:25.5262508+03:00 0HLE59RVCR1FT:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:29:25.5275899+03:00 0HLE59RVCR1FT:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:29:25.7185636+03:00 0HLE59RVCR1FT:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:29:25.7603548+03:00 0HLE59RVCR1FT:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 43.8135ms (afa2e885)
+2018-05-29T13:29:25.8014040+03:00 0HLE59RVCR1FT:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: Could not create an instance of type 'Microsoft.AspNetCore.Http.HttpContext'. Model bound complex types must not be abstract or value types and must have a parameterless constructor.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.<BindModelCoreAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.<BindModelAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-29T13:29:25.9082737+03:00 0HLE59RVCR1FT:00000001 [INF] Request finished in 380.793ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:29:26.1453209+03:00 0HLE59RVCR1FS:00000002 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:29:27.4120855+03:00 0HLE59RVCR1FS:00000002 [INF] Executed DbCommand ("59"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:29:27.9772543+03:00 0HLE59RVCR1FS:00000002 [INF] Executing ViewResult, running view at path "/Views/Submission/Index.cshtml". (9707eebe)
+2018-05-29T13:29:28.0840835+03:00 0HLE59RVCR1FS:00000002 [INF] Executed action "PeerReview.Controllers.SubmissionController.Index (PeerReview)" in 3736.2595ms (afa2e885)
+2018-05-29T13:29:28.0880555+03:00 0HLE59RVCR1FS:00000002 [INF] Request finished in 3785.0402ms 200 text/html; charset=utf-8 (791a596a)

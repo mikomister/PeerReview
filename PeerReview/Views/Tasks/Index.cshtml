@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PeerReview.Models.Task>
+
+@{
+  ViewBag.Title = "title";
+  Layout = "_Layout";
+}
+
+<h2>Задачи:</h2>
+
+
+@{
+  if (Model != null)
+  {
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <td>#</td>
+          <td>Task name</td>
+          <td>Expiration date</td>
+          <td>Ссылка на задание</td>
+        </tr>
+        </thead>
+        <tbody>
+        @{int i=1;}
+        @foreach (var task in Model)
+        {
+          if (ViewBag.SolvedTasks != null && ViewBag.SolvedTasks.Contains(task.Id))
+          {
+            continue;
+          }
+              <tr>
+                <td>@i</td>
+                <td>@task.Title</td>
+                <td>@task.ExpirationDate.ToShortDateString()</td>
+                <td>@Html.ActionLink("Решить", "Create", "Submission", new {id = task.Id})</td>
+              </tr>
+              i++;
+        }
+        </tbody>
+      </table>
+    </div>
+  }
+  else
+  {
+    <p>На данный момент заданий нет.</p>
+  }
+}
+@if(User.IsInRole("admin") || User.IsInRole("teacher"))
+{
+<form method="GET" asp-controller="Tasks" asp-action="Create"> 
+  <div> 
+    <button type="submit" class="btn btn-success">Создать задачу</button> 
+  </div> 
+</form>
+}

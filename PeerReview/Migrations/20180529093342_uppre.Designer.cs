@@ -11,9 +11,10 @@ using System;
 namespace PeerReview.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180529093342_uppre")]
+    partial class uppre
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,8 +133,6 @@ namespace PeerReview.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("InviteCode");
-
                     b.Property<int>("UserId");
 
                     b.Property<string>("UserId1");
@@ -183,15 +182,17 @@ namespace PeerReview.Migrations
                     b.Property<string>("Code")
                         .HasMaxLength(4096);
 
-                    b.Property<bool>("IsChecking");
+                    b.Property<int?>("TaskId1");
 
-                    b.Property<int>("TaskId");
+                    b.Property<int?>("TaskIdId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId1");
 
-                    b.HasIndex("TaskId");
+                    b.HasIndex("TaskId1");
+
+                    b.HasIndex("TaskIdId");
 
                     b.ToTable("Submissions");
                 });
@@ -336,8 +337,11 @@ namespace PeerReview.Migrations
 
                     b.HasOne("PeerReview.Models.Task", "Task")
                         .WithMany()
-                        .HasForeignKey("TaskId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("TaskId1");
+
+                    b.HasOne("PeerReview.Models.Task", "TaskId")
+                        .WithMany()
+                        .HasForeignKey("TaskIdId");
                 });
 #pragma warning restore 612, 618
         }

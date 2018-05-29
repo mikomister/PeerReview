@@ -27,8 +27,9 @@ namespace PeerReview.Controllers
         }
         
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
+            ViewBag.taskId = id;
             return View();
         }
         
@@ -37,7 +38,9 @@ namespace PeerReview.Controllers
         {
             if (ModelState.IsValid)
             {
-                Submission submission = new Submission { Code = model.Code };
+                Submission submission = new Submission { Code = model.Code, TaskId = model.TaskId, Task = _db.Tasks.FirstOrDefault(x=>x.Id == model.TaskId)};
+                _db.Submissions.Add(submission);
+                _db.SaveChanges();
                 return RedirectToAction("Index", "Submission");
             }
             return View();

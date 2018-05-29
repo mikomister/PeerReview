@@ -1,0 +1,552 @@
+2018-05-29T13:29:01.7145692+03:00 0HLE59RVCR1FS:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-05-29T13:29:02.2562711+03:00 0HLE59RVCR1FS:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:29:02.4506924+03:00 0HLE59RVCR1FS:00000001 [INF] Executing action method "PeerReview.Controllers.HomeController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:34:40.8877095+03:00 0HLE59V4FFANB:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:34:41.3691772+03:00 0HLE59V4FFANB:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:34:41.6865905+03:00 0HLE59V4FFANB:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:34:41.7261903+03:00 0HLE59V4FFANB:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 47.5941ms (afa2e885)
+2018-05-29T13:34:41.7718380+03:00 0HLE59V4FFANB:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: Could not create an instance of type 'Microsoft.AspNetCore.Http.HttpContext'. Model bound complex types must not be abstract or value types and must have a parameterless constructor.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.<BindModelCoreAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.<BindModelAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-29T13:34:41.8819913+03:00 0HLE59V4FFANB:00000001 [INF] Request finished in 1018.3658ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:35:39.3524942+03:00 0HLE59VLSU1PL:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-05-29T13:35:39.8677740+03:00 0HLE59VLSU1PL:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:35:40.0722773+03:00 0HLE59VLSU1PL:00000001 [INF] Executing action method "PeerReview.Controllers.HomeController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:35:43.5913192+03:00 0HLE59VLSU1PL:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-05-29T13:35:44.7865917+03:00 0HLE59VLSU1PL:00000001 [INF] Executed action "PeerReview.Controllers.HomeController.Index (PeerReview)" in 4722.6822ms (afa2e885)
+2018-05-29T13:35:44.8027620+03:00 0HLE59VLSU1PL:00000001 [INF] Request finished in 5477.4443ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:35:51.3445600+03:00 0HLE59VLSU1PL:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:35:51.3563247+03:00 0HLE59VLSU1PL:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:35:51.4251775+03:00 0HLE59VLSU1PL:00000002 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:35:51.4289107+03:00 0HLE59VLSU1PL:00000002 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:35:53.0078043+03:00 0HLE59VLSU1PL:00000002 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:35:54.3540609+03:00 0HLE59VLSU1PL:00000002 [INF] Executed DbCommand ("72"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:35:54.6053785+03:00 0HLE59VLSU1PL:00000002 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 3237.5532ms (afa2e885)
+2018-05-29T13:35:54.6389774+03:00 0HLE59VLSU1PL:00000002 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at PeerReview.Controllers.TasksController.Index() in /home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/Controllers/TasksController.cs:line 29
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-29T13:35:54.7438130+03:00 0HLE59VLSU1PL:00000002 [INF] Request finished in 3399.4005ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:39:49.0294781+03:00 0HLE59VLSU1PM:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:39:49.0307861+03:00 0HLE59VLSU1PM:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:39:49.0405587+03:00 0HLE59VLSU1PM:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:39:49.0439914+03:00 0HLE59VLSU1PM:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:39:49.0579503+03:00 0HLE59VLSU1PM:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:39:49.1100596+03:00 0HLE59VLSU1PM:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:39:49.1139362+03:00 0HLE59VLSU1PM:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 82.3849ms (afa2e885)
+2018-05-29T13:39:49.1413119+03:00 0HLE59VLSU1PM:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at PeerReview.Controllers.TasksController.Index() in /home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/Controllers/TasksController.cs:line 29
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-29T13:39:49.1814196+03:00 0HLE59VLSU1PM:00000001 [INF] Request finished in 152.0168ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:39:49.4296510+03:00 0HLE59VLSU1PM:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-05-29T13:39:49.4664512+03:00 0HLE59VLSU1PM:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/favicon.ico"' (27b0a520)
+2018-05-29T13:39:49.4947484+03:00 0HLE59VLSU1PM:00000002 [INF] Request finished in 65.3003ms 200 image/x-icon (791a596a)
+2018-05-29T13:40:10.7100074+03:00 0HLE5A26OS252:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:40:11.2120150+03:00 0HLE5A26OS252:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:40:11.4033664+03:00 0HLE5A26OS252:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:40:11.4256588+03:00 0HLE5A26OS252:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:40:12.9156429+03:00 0HLE5A26OS252:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:40:14.2441517+03:00 0HLE5A26OS252:00000001 [INF] Executed DbCommand ("64"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:40:14.4978751+03:00 0HLE5A26OS252:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 3105.2971ms (afa2e885)
+2018-05-29T13:40:14.5440673+03:00 0HLE5A26OS252:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at PeerReview.Controllers.TasksController.Index() in /home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/Controllers/TasksController.cs:line 29
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-29T13:40:14.6940354+03:00 0HLE5A26OS252:00000001 [INF] Request finished in 4012.3938ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:41:02.1546936+03:00 0HLE5A2M39TE9:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:41:02.6772251+03:00 0HLE5A2M39TE9:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:41:02.8659952+03:00 0HLE5A2M39TE9:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:41:02.8879357+03:00 0HLE5A2M39TE9:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:41:04.3598673+03:00 0HLE5A2M39TE9:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:41:05.6870825+03:00 0HLE5A2M39TE9:00000001 [INF] Executed DbCommand ("64"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:41:05.9386030+03:00 0HLE5A2M39TE9:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 3081.8706ms (afa2e885)
+2018-05-29T13:41:05.9822450+03:00 0HLE5A2M39TE9:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at PeerReview.Controllers.TasksController.Index() in /home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/Controllers/TasksController.cs:line 29
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-29T13:41:06.1169321+03:00 0HLE5A2M39TE9:00000001 [INF] Request finished in 3991.685ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:41:06.3021598+03:00 0HLE5A2M39TE9:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-05-29T13:41:06.3261939+03:00 0HLE5A2M39TE9:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/favicon.ico"' (27b0a520)
+2018-05-29T13:41:06.3504666+03:00 0HLE5A2M39TE9:00000002 [INF] Request finished in 48.4656ms 200 image/x-icon (791a596a)
+2018-05-29T13:42:45.4441995+03:00 0HLE5A3KSDH70:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:42:45.9542445+03:00 0HLE5A3KSDH70:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:42:46.1614549+03:00 0HLE5A3KSDH70:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:42:46.1817090+03:00 0HLE5A3KSDH70:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:42:47.7049342+03:00 0HLE5A3KSDH70:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:42:49.0191163+03:00 0HLE5A3KSDH70:00000001 [INF] Executed DbCommand ("63"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:42:49.3354519+03:00 0HLE5A3KSDH70:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"t\".\"Id\", \"t\".\"Descrition\", \"t\".\"ExpirationDate\", \"t\".\"Title\"
+FROM \"Tasks\" AS \"t\"" (0723d8ff)
+2018-05-29T13:42:52.7796968+03:00 0HLE5A3KSDH70:00000001 [INF] Executing ViewResult, running view at path "/Views/Tasks/Index.cshtml". (9707eebe)
+2018-05-29T13:42:54.0002073+03:00 0HLE5A3KSDH70:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 7846.219ms (afa2e885)
+2018-05-29T13:42:54.0159177+03:00 0HLE5A3KSDH70:00000001 [INF] Request finished in 8601.0003ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:42:54.2632799+03:00 0HLE5A3KSDH70:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-05-29T13:42:54.2888355+03:00 0HLE5A3KSDH70:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/favicon.ico"' (27b0a520)
+2018-05-29T13:42:54.3065728+03:00 0HLE5A3KSDH70:00000002 [INF] Request finished in 43.407ms 200 image/x-icon (791a596a)
+2018-05-29T13:44:02.0867135+03:00 0HLE5A4BNC8U1:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:44:02.6037019+03:00 0HLE5A4BNC8U1:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:44:02.7971841+03:00 0HLE5A4BNC8U1:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:44:02.8191881+03:00 0HLE5A4BNC8U1:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:44:04.3730663+03:00 0HLE5A4BNC8U1:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:44:05.8355243+03:00 0HLE5A4BNC8U1:00000001 [INF] Executed DbCommand ("63"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:44:06.1418421+03:00 0HLE5A4BNC8U1:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"t\".\"Id\", \"t\".\"Descrition\", \"t\".\"ExpirationDate\", \"t\".\"Title\"
+FROM \"Tasks\" AS \"t\"" (0723d8ff)
+2018-05-29T13:44:09.6295127+03:00 0HLE5A4BNC8U1:00000001 [INF] Executing ViewResult, running view at path "/Views/Tasks/Index.cshtml". (9707eebe)
+2018-05-29T13:44:10.9074500+03:00 0HLE5A4BNC8U1:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 8121.2656ms (afa2e885)
+2018-05-29T13:44:10.9225039+03:00 0HLE5A4BNC8U1:00000001 [INF] Request finished in 8870.957ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:44:11.6251177+03:00 0HLE5A4BNC8U1:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-05-29T13:44:11.6573707+03:00 0HLE5A4BNC8U1:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/favicon.ico"' (27b0a520)
+2018-05-29T13:44:11.6811802+03:00 0HLE5A4BNC8U1:00000002 [INF] Request finished in 56.252ms 200 image/x-icon (791a596a)
+2018-05-29T13:44:14.3634478+03:00 0HLE5A4BNC8U1:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Submission/Create/1   (ca22a1cb)
+2018-05-29T13:44:14.3657707+03:00 0HLE5A4BNC8U1:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:44:14.4304062+03:00 0HLE5A4BNC8U1:00000003 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:44:14.4397678+03:00 0HLE5A4BNC8U1:00000003 [INF] Executing action method "PeerReview.Controllers.SubmissionController.Create (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:44:14.8336381+03:00 0HLE5A4BNC8U1:00000003 [INF] Executing ViewResult, running view at path "/Views/Submission/Create.cshtml". (9707eebe)
+2018-05-29T13:44:14.9131866+03:00 0HLE5A4BNC8U1:00000003 [INF] Executed action "PeerReview.Controllers.SubmissionController.Create (PeerReview)" in 498.6729ms (afa2e885)
+2018-05-29T13:44:14.9195749+03:00 0HLE5A4BNC8U1:00000003 [INF] Request finished in 556.3066ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:49:45.3759481+03:00  [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:50:13.1116779+03:00  [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:50:14.1644108+03:00  [INF] Executed DbCommand ("67"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');" (0723d8ff)
+2018-05-29T13:50:14.1954210+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');" (0723d8ff)
+2018-05-29T13:50:14.2138677+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2018-05-29T13:50:14.2487455+03:00  [INF] Applying migration '"20180529104945_upp12"'. (0e2ac64d)
+2018-05-29T13:50:14.4093578+03:00  [INF] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE \"Submissions\" DROP CONSTRAINT \"FK_Submissions_Tasks_TaskId1\";" (0723d8ff)
+2018-05-29T13:50:14.4112776+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE \"Submissions\" DROP CONSTRAINT \"FK_Submissions_Tasks_TaskIdId\";" (0723d8ff)
+2018-05-29T13:50:14.4309081+03:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP INDEX \"IX_Submissions_TaskId1\";" (0723d8ff)
+2018-05-29T13:50:14.4319291+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP INDEX \"IX_Submissions_TaskIdId\";" (0723d8ff)
+2018-05-29T13:50:14.4441197+03:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE \"Submissions\" DROP COLUMN \"TaskId1\";" (0723d8ff)
+2018-05-29T13:50:14.4467005+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE \"Submissions\" DROP COLUMN \"TaskIdId\";" (0723d8ff)
+2018-05-29T13:50:15.0977293+03:00  [INF] Executed DbCommand ("650"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE \"Submissions\" ADD \"TaskId\" int4 NOT NULL DEFAULT 0;" (0723d8ff)
+2018-05-29T13:50:15.1330931+03:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Submissions_TaskId\" ON \"Submissions\" (\"TaskId\");" (0723d8ff)
+2018-05-29T13:50:15.1630488+03:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE \"Submissions\" ADD CONSTRAINT \"FK_Submissions_Tasks_TaskId\" FOREIGN KEY (\"TaskId\") REFERENCES \"Tasks\" (\"Id\") ON DELETE CASCADE;" (0723d8ff)
+2018-05-29T13:50:15.1644724+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\")
+VALUES ('20180529104945_upp12', '2.0.3-rtm-10026');" (0723d8ff)
+2018-05-29T13:50:30.9591614+03:00 0HLE5A7VK3ESJ:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-05-29T13:50:32.9254466+03:00 0HLE5A7VK3ESJ:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:50:34.4129588+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("70"ms) [Parameters=["@__get_Item_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"e\".\"Id\", \"e\".\"AccessFailedCount\", \"e\".\"ConcurrencyStamp\", \"e\".\"CountInvites\", \"e\".\"Email\", \"e\".\"EmailConfirmed\", \"e\".\"LockoutEnabled\", \"e\".\"LockoutEnd\", \"e\".\"NormalizedEmail\", \"e\".\"NormalizedUserName\", \"e\".\"PasswordHash\", \"e\".\"PhoneNumber\", \"e\".\"PhoneNumberConfirmed\", \"e\".\"SecurityStamp\", \"e\".\"TwoFactorEnabled\", \"e\".\"UserName\"
+FROM \"AspNetUsers\" AS \"e\"
+WHERE \"e\".\"Id\" = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:50:34.9625608+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"uc\".\"Id\", \"uc\".\"ClaimType\", \"uc\".\"ClaimValue\", \"uc\".\"UserId\"
+FROM \"AspNetUserClaims\" AS \"uc\"
+WHERE \"uc\".\"UserId\" = @__user_Id_0" (0723d8ff)
+2018-05-29T13:50:35.1021684+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("9"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"role\".\"Name\"
+FROM \"AspNetUserRoles\" AS \"userRole\"
+INNER JOIN \"AspNetRoles\" AS \"role\" ON \"userRole\".\"RoleId\" = \"role\".\"Id\"
+WHERE \"userRole\".\"UserId\" = @__userId_0" (0723d8ff)
+2018-05-29T13:50:35.1478227+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"r\".\"Id\", \"r\".\"ConcurrencyStamp\", \"r\".\"Name\", \"r\".\"NormalizedName\"
+FROM \"AspNetRoles\" AS \"r\"
+WHERE \"r\".\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:50:35.2241962+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"rc\".\"ClaimType\", \"rc\".\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS \"rc\"
+WHERE \"rc\".\"RoleId\" = @__role_Id_0" (0723d8ff)
+2018-05-29T13:50:35.2437238+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"r\".\"Id\", \"r\".\"ConcurrencyStamp\", \"r\".\"Name\", \"r\".\"NormalizedName\"
+FROM \"AspNetRoles\" AS \"r\"
+WHERE \"r\".\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:50:35.2507881+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"rc\".\"ClaimType\", \"rc\".\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS \"rc\"
+WHERE \"rc\".\"RoleId\" = @__role_Id_0" (0723d8ff)
+2018-05-29T13:50:35.2547241+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"r\".\"Id\", \"r\".\"ConcurrencyStamp\", \"r\".\"Name\", \"r\".\"NormalizedName\"
+FROM \"AspNetRoles\" AS \"r\"
+WHERE \"r\".\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:50:35.2588116+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"rc\".\"ClaimType\", \"rc\".\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS \"rc\"
+WHERE \"rc\".\"RoleId\" = @__role_Id_0" (0723d8ff)
+2018-05-29T13:50:35.2700961+03:00 0HLE5A7VK3ESJ:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:50:35.4833067+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executing action method "PeerReview.Controllers.HomeController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:50:39.3953318+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-05-29T13:50:41.3252105+03:00 0HLE5A7VK3ESJ:00000001 [INF] Executed action "PeerReview.Controllers.HomeController.Index (PeerReview)" in 5853.4708ms (afa2e885)
+2018-05-29T13:50:41.3433544+03:00 0HLE5A7VK3ESJ:00000001 [INF] Request finished in 10407.9272ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:50:42.4836247+03:00 0HLE5A7VK3ESJ:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-05-29T13:50:42.5287953+03:00 0HLE5A7VK3ESJ:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/favicon.ico"' (27b0a520)
+2018-05-29T13:50:42.5525657+03:00 0HLE5A7VK3ESJ:00000002 [INF] Request finished in 68.184ms 200 image/x-icon (791a596a)
+2018-05-29T13:50:54.0303999+03:00 0HLE5A7VK3ESJ:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Submission   (ca22a1cb)
+2018-05-29T13:50:54.0336924+03:00 0HLE5A7VK3ESJ:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:50:54.1038402+03:00 0HLE5A7VK3ESJ:00000003 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:50:54.1056018+03:00 0HLE5A7VK3ESJ:00000003 [INF] Executing action method "PeerReview.Controllers.SubmissionController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:50:54.1196190+03:00 0HLE5A7VK3ESJ:00000003 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:50:54.1842215+03:00 0HLE5A7VK3ESJ:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:50:54.7578752+03:00 0HLE5A7VK3ESJ:00000003 [INF] Executing ViewResult, running view at path "/Views/Submission/Index.cshtml". (9707eebe)
+2018-05-29T13:50:55.2081632+03:00 0HLE5A7VK3ESJ:00000003 [INF] Executed action "PeerReview.Controllers.SubmissionController.Index (PeerReview)" in 1122.7929ms (afa2e885)
+2018-05-29T13:50:55.2349771+03:00 0HLE5A7VK3ESJ:00000003 [INF] Request finished in 1202.9622ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:50:58.3276997+03:00 0HLE5A7VK3ESJ:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:50:58.3288413+03:00 0HLE5A7VK3ESJ:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:50:58.3402252+03:00 0HLE5A7VK3ESJ:00000004 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:50:58.3441156+03:00 0HLE5A7VK3ESJ:00000004 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:50:58.3509198+03:00 0HLE5A7VK3ESJ:00000004 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:50:58.3553594+03:00 0HLE5A7VK3ESJ:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:50:58.3849964+03:00 0HLE5A7VK3ESJ:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"t\".\"Id\", \"t\".\"Descrition\", \"t\".\"ExpirationDate\", \"t\".\"Title\"
+FROM \"Tasks\" AS \"t\"" (0723d8ff)
+2018-05-29T13:50:58.9358048+03:00 0HLE5A7VK3ESJ:00000004 [INF] Executing ViewResult, running view at path "/Views/Tasks/Index.cshtml". (9707eebe)
+2018-05-29T13:50:59.0340621+03:00 0HLE5A7VK3ESJ:00000004 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 698.8749ms (afa2e885)
+2018-05-29T13:50:59.0351871+03:00 0HLE5A7VK3ESJ:00000004 [INF] Request finished in 707.2237ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:51:00.2078836+03:00 0HLE5A7VK3ESJ:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Submission/Create/1   (ca22a1cb)
+2018-05-29T13:51:00.2090654+03:00 0HLE5A7VK3ESJ:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:51:00.2392675+03:00 0HLE5A7VK3ESJ:00000005 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:51:00.2813183+03:00 0HLE5A7VK3ESJ:00000005 [INF] Executing action method "PeerReview.Controllers.SubmissionController.Create (PeerReview)" with arguments (["0"]) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:51:00.6667383+03:00 0HLE5A7VK3ESJ:00000005 [INF] Executing ViewResult, running view at path "/Views/Submission/Create.cshtml". (9707eebe)
+2018-05-29T13:51:00.7342170+03:00 0HLE5A7VK3ESJ:00000005 [INF] Executed action "PeerReview.Controllers.SubmissionController.Create (PeerReview)" in 494.9874ms (afa2e885)
+2018-05-29T13:51:00.7361167+03:00 0HLE5A7VK3ESJ:00000005 [INF] Request finished in 528.3706ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:52:19.4037508+03:00 0HLE5A8VU3N3U:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:52:20.0177338+03:00 0HLE5A8VU3N3U:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:52:20.2495100+03:00 0HLE5A8VU3N3U:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:52:20.2729965+03:00 0HLE5A8VU3N3U:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:52:21.8795508+03:00 0HLE5A8VU3N3U:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:52:22.6088014+03:00 0HLE5A8VU3N3V:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:52:22.6144860+03:00 0HLE5A8VU3N3V:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:52:22.6184378+03:00 0HLE5A8VU3N3V:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:52:22.6210412+03:00 0HLE5A8VU3N3V:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:52:22.6377168+03:00 0HLE5A8VU3N3V:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:52:23.4861548+03:00 0HLE5A8VU3N3V:00000001 [INF] Executed DbCommand ("77"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:52:23.4855921+03:00 0HLE5A8VU3N3U:00000001 [INF] Executed DbCommand ("74"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:52:23.9404960+03:00 0HLE5A8VU3N3U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"t\".\"Id\", \"t\".\"Descrition\", \"t\".\"ExpirationDate\", \"t\".\"Title\"
+FROM \"Tasks\" AS \"t\"" (0723d8ff)
+2018-05-29T13:52:23.9431130+03:00 0HLE5A8VU3N3V:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"t\".\"Id\", \"t\".\"Descrition\", \"t\".\"ExpirationDate\", \"t\".\"Title\"
+FROM \"Tasks\" AS \"t\"" (0723d8ff)
+2018-05-29T13:52:26.7609667+03:00 0HLE5A8VU3N40:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Tasks   (ca22a1cb)
+2018-05-29T13:52:26.7621158+03:00 0HLE5A8VU3N40:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:52:26.7625648+03:00 0HLE5A8VU3N40:00000001 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:52:26.7630863+03:00 0HLE5A8VU3N40:00000001 [INF] Executing action method "PeerReview.Controllers.TasksController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:52:26.7645411+03:00 0HLE5A8VU3N40:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-29T13:52:26.7748891+03:00 0HLE5A8VU3N40:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__GetUserId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"u\".\"Id\", \"u\".\"AccessFailedCount\", \"u\".\"ConcurrencyStamp\", \"u\".\"CountInvites\", \"u\".\"Email\", \"u\".\"EmailConfirmed\", \"u\".\"LockoutEnabled\", \"u\".\"LockoutEnd\", \"u\".\"NormalizedEmail\", \"u\".\"NormalizedUserName\", \"u\".\"PasswordHash\", \"u\".\"PhoneNumber\", \"u\".\"PhoneNumberConfirmed\", \"u\".\"SecurityStamp\", \"u\".\"TwoFactorEnabled\", \"u\".\"UserName\"
+FROM \"AspNetUsers\" AS \"u\"
+WHERE \"u\".\"Id\" = @__GetUserId_0
+LIMIT 1" (0723d8ff)
+2018-05-29T13:52:26.7797624+03:00 0HLE5A8VU3N40:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"t\".\"Id\", \"t\".\"Descrition\", \"t\".\"ExpirationDate\", \"t\".\"Title\"
+FROM \"Tasks\" AS \"t\"" (0723d8ff)
+2018-05-29T13:52:28.6694860+03:00 0HLE5A8VU3N3U:00000001 [INF] Executing ViewResult, running view at path "/Views/Tasks/Index.cshtml". (9707eebe)
+2018-05-29T13:52:28.6696447+03:00 0HLE5A8VU3N3V:00000001 [INF] Executing ViewResult, running view at path "/Views/Tasks/Index.cshtml". (9707eebe)
+2018-05-29T13:52:28.6694860+03:00 0HLE5A8VU3N40:00000001 [INF] Executing ViewResult, running view at path "/Views/Tasks/Index.cshtml". (9707eebe)
+2018-05-29T13:52:30.4488964+03:00 0HLE5A8VU3N40:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 3678.7527ms (afa2e885)
+2018-05-29T13:52:30.4488964+03:00 0HLE5A8VU3N3V:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 7822.8156ms (afa2e885)
+2018-05-29T13:52:30.4499913+03:00 0HLE5A8VU3N3U:00000001 [INF] Executed action "PeerReview.Controllers.TasksController.Index (PeerReview)" in 10209.7236ms (afa2e885)
+2018-05-29T13:52:30.4725644+03:00 0HLE5A8VU3N3U:00000001 [INF] Request finished in 11098.4732ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:52:30.4771221+03:00 0HLE5A8VU3N40:00000001 [INF] Request finished in 3708.8383ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:52:30.4795822+03:00 0HLE5A8VU3N3V:00000001 [INF] Request finished in 7856.1624ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-29T13:52:40.4510713+03:00 0HLE5A8VU3N40:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Submission/Create/1   (ca22a1cb)
+2018-05-29T13:52:40.4522039+03:00 0HLE5A8VU3N40:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-29T13:52:40.4941848+03:00 0HLE5A8VU3N40:00000002 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-29T13:52:40.5356727+03:00 0HLE5A8VU3N40:00000002 [INF] Executing action method "PeerReview.Controllers.SubmissionController.Create (PeerReview)" with arguments (["0"]) - ModelState is Valid (ba7f4ac2)
+2018-05-29T13:52:40.8875035+03:00 0HLE5A8VU3N40:00000002 [INF] Executing ViewResult, running view at path "/Views/Submission/Create.cshtml". (9707eebe)
+2018-05-29T13:52:40.9575144+03:00 0HLE5A8VU3N40:00000002 [INF] Executed action "PeerReview.Controllers.SubmissionController.Create (PeerReview)" in 465.0869ms (afa2e885)
+2018-05-29T13:52:40.9593945+03:00 0HLE5A8VU3N40:00000002 [INF] Request finished in 507.9459ms 200 text/html; charset=utf-8 (791a596a)

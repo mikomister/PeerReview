@@ -8,8 +8,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using PeerReview.Models;
 using PeerReview.Services;
+using Microsoft.Extensions.Logging;
 
 namespace PeerReview
 {
@@ -33,12 +35,11 @@ namespace PeerReview
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IEmailSender, EmailSender>();
-            
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -52,6 +53,8 @@ namespace PeerReview
                 app.UseDeveloperExceptionPage();
             }
 
+            loggerFactory.AddFile("Logs/App-{Date}.txt");
+            
             app.UseStaticFiles();
 
             app.UseAuthentication();

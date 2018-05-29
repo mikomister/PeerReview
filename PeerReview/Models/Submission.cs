@@ -16,10 +16,13 @@ namespace PeerReview.Models
             get { return this.Reviews.Average(review => review.Assessment); }
         }
         
+        public bool IsChecking { get; set; }
+        
         public List<Review> Reviews { get; set; }
         
         public int AuthorId { get; set; }
         public User Author { get; set; }
+        public int TaskId { get; set; }
         public Task Task { get; set; }
         
     }

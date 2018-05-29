@@ -7,11 +7,9 @@
 <h2>Создать решение</h2>
 
 <form method="POST" asp-controller="Submission" asp-action="Create">
+    <input type="hidden" value="@ViewBag.taskId"/>
     <div class="form-group">
         <textarea class="form-control" rows="5" placeholder="Enter your code..."></textarea>
     </div>
-    <select class="form-control">
-        <option value=""></option>
-    </select>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>

@@ -28,6 +28,7 @@ namespace PeerReview.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
+        private  AppDbContext _db;
 
         private const string AuthenicatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
 
@@ -36,13 +37,14 @@ namespace PeerReview.Controllers
           SignInManager<User> signInManager,
           IEmailSender emailSender,
           ILogger<ManageController> logger,
-          UrlEncoder urlEncoder)
+          UrlEncoder urlEncoder,AppDbContext ctx)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
             _urlEncoder = urlEncoder;
+            _db = ctx;
         }
 
         [TempData]
@@ -200,6 +202,39 @@ namespace PeerReview.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> CreateInvite()
+        {
+            return View();
+        }
+
+        
+        [HttpPost]
+        public async Task<IActionResult> CreateInvite(CreateInviteViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (CheckMailExistense(model.Email))
+                {
+                    var invite = new Invite(_db.Users.FirstOrDefault(x => x.Id == _userManager.GetUserId(User)));
+                    _db.Invites.Add(invite);
+                    _db.SaveChanges();
+                
+                    var emailService = new EmailSender();
+                    await emailService.SendEmailAsync(model.Email, 
+                        "Приглашение на  PeerReview", $"Вы можете зарегистрироваться на PeerReview.com по ссылке: http://PeerReview.com/Account/Register/{invite.InviteCode}");
+                }
+               return RedirectToAction("Index", "Manage");
+            }
+            else return RedirectToAction("Index", "Manage");
+        }
+            
+        [NonAction]
+        private bool CheckMailExistense(string email)
+        {
+            return _userManager.Users.Select(x => x.Email).Contains(email);
+        }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SetPassword(SetPasswordViewModel model)

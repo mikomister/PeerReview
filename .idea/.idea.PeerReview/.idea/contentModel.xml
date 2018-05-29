@@ -11,10 +11,22 @@
           <e p="ReviewController.cs" t="Include" />
           <e p="RolesController.cs" t="Include" />
           <e p="SubmissionController.cs" t="Include" />
+          <e p="TasksController.cs" t="Include" />
         </e>
         <e p="Extensions" t="Include">
           <e p="EmailSenderExtensions.cs" t="Include" />
           <e p="UrlHelperExtensions.cs" t="Include" />
+        </e>
+        <e p="Logs" t="Include">
+          <e p="App-20180529 (2).txt" t="Include" />
+          <e p="App-20180529 (3).txt" t="Include" />
+          <e p="App-20180529 (4).txt" t="Include" />
+          <e p="App-20180529 (5).txt" t="Include" />
+          <e p="App-20180529 (6).txt" t="Include" />
+          <e p="App-20180529 (7).txt" t="Include" />
+          <e p="App-20180529 (8).txt" t="Include" />
+          <e p="App-20180529 (9).txt" t="Include" />
+          <e p="App-20180529.txt" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20180522231526_Initial.Designer.cs" t="Include" />
@@ -29,6 +41,14 @@
           <e p="20180523035809_UpdateUser.cs" t="Include" />
           <e p="20180523090113_AddTask123.Designer.cs" t="Include" />
           <e p="20180523090113_AddTask123.cs" t="Include" />
+          <e p="20180529093342_uppre.Designer.cs" t="Include" />
+          <e p="20180529093342_uppre.cs" t="Include" />
+          <e p="20180529104945_upp12.Designer.cs" t="Include" />
+          <e p="20180529104945_upp12.cs" t="Include" />
+          <e p="20180529110643_upp13.Designer.cs" t="Include" />
+          <e p="20180529110643_upp13.cs" t="Include" />
+          <e p="20180529121236_upp14.Designer.cs" t="Include" />
+          <e p="20180529121236_upp14.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -56,6 +76,7 @@
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="ManageViewModel" t="Include">
             <e p="ChangePasswordViewModel.cs" t="Include" />
+            <e p="CreateInviteViewModel.cs" t="Include" />
             <e p="EnableAuthenticatorViewModel.cs" t="Include" />
             <e p="ExternalLoginsViewModel.cs" t="Include" />
             <e p="GenerateRecoveryCodesViewModel.cs" t="Include" />
@@ -67,6 +88,9 @@
           <e p="ReviewViewModel" t="Include" />
           <e p="SubmissionViewModel" t="Include">
             <e p="SubmissionViewModel.cs" t="Include" />
+          </e>
+          <e p="TasksViewModel" t="Include">
+            <e p="CreateViewModel.cs" t="Include" />
           </e>
         </e>
         <e p="Views" t="Include">
@@ -84,6 +108,7 @@
           </e>
           <e p="Manage" t="Include">
             <e p="ChangePassword.cshtml" t="Include" />
+            <e p="CreateInvite.cshtml" t="Include" />
             <e p="Disable2fa.cshtml" t="Include" />
             <e p="EnableAuthenticator.cshtml" t="Include" />
             <e p="ExternalLogins.cshtml" t="Include" />
@@ -107,7 +132,6 @@
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="UserList.cshtml" t="Include" />
-            <e p="UserListcshtml.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
@@ -116,6 +140,10 @@
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
           <e p="Submission" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Tasks" t="Include">
             <e p="Create.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>

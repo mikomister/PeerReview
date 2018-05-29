@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PeerReview.Models;
@@ -8,6 +9,7 @@ using PeerReview.ViewModels;
 
 namespace PeerReview.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class RolesController : Controller
     {
         private RoleManager<IdentityRole> _roleManager;

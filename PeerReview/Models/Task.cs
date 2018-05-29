@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace PeerReview.Models
@@ -8,12 +9,15 @@ namespace PeerReview.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Descrition { get; set; }
+        
         private DateTime _expirationDate;
+        
         [DataType(DataType.DateTime)]
         public DateTime ExpirationDate
         {
             get => _expirationDate;
             set => _expirationDate = value;
         }
+
     }
 }

@@ -11,9 +11,10 @@ using System;
 namespace PeerReview.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180529104945_upp12")]
+    partial class upp12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,8 +133,6 @@ namespace PeerReview.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("InviteCode");
-
                     b.Property<int>("UserId");
 
                     b.Property<string>("UserId1");
@@ -182,8 +181,6 @@ namespace PeerReview.Migrations
 
                     b.Property<string>("Code")
                         .HasMaxLength(4096);
-
-                    b.Property<bool>("IsChecking");
 
                     b.Property<int>("TaskId");
 

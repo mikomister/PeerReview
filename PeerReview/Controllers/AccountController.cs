@@ -66,29 +66,31 @@ namespace PeerReview.Controllers
             return RedirectToAction("Index", "Home");
         }
         
-        public IActionResult Register()
+        public IActionResult Register(string id)
         {
+            ViewBag.Invite = id;
             return View();
         }
         
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-//                var invite = _db.Invites.FirstOrDefault((i) => i.InviteCode == model.Invite);
+                var invite = _db.Invites.FirstOrDefault((i) => i.InviteCode == model.Invite);
         
-//            if(ModelState.IsValid && invite!=null)
-            if(ModelState.IsValid)
+            if(ModelState.IsValid && invite!=null)
+//            if(ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email, CountInvites = 3 };
+                User user = new User { Email = model.Email, UserName = model.Email, CountInvites = 3,  };
                 // добавляем пользователя
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    _userManager.AddToRoleAsync(user, "student");
                     // установка куки
                     await _signInManager.SignInAsync(user, false);
-//                    invite.User.CountInvites--;
-//                    _db.Invites.Remove(invite);
-//                    _db.SaveChanges();
+                    invite.User.CountInvites--;
+                    _db.Invites.Remove(invite);
+                    _db.SaveChanges();
                     return RedirectToAction("Index", "Home");
                 }
                 else

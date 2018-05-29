@@ -10,19 +10,19 @@ namespace PeerReview.Models
         [Key] 
         public int Id { get; set; }
         
-        public string InviteCode { get; }
+        public string InviteCode { get; set; }
 
-        public Invite()
+        public Invite(User user)
         {
-            this.InviteCode = GenerateInvite(this.UserId * 13 + (new Random().Next(10, 10000)) + "");
+            this.InviteCode = GenerateInvite(user.Id.GetHashCode() * 13 + (new Random().Next(10, 10000)) + "", user);
         }
 
         public int UserId { get; set; }
         public User User { get; set; }
 
-        private string GenerateInvite(string key)
+        private string GenerateInvite(string key, User user)
         {
-            var toEncrypt = key + this.User.ConcurrencyStamp + this.User.Email + new Random().NextDouble() * 100 +
+            var toEncrypt = key + user.ConcurrencyStamp + user.Email + new Random().NextDouble() * 100 +
                             new DateTime();
             return GetSHA256Hash(SHA256.Create(), toEncrypt);
         }

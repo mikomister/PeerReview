@@ -1,0 +1,14 @@
+﻿@model PeerReview.ViewModels.ManageViewModel.CreateInviteViewModel
+
+<h2>Создать инвайт</h2>
+<form method="post" asp-controller="Manage" asp-action="CreateInvite">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <input type="submit" value="Выслать приглашение" />
+    </div>
+</form>
