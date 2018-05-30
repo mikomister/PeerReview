@@ -1,14 +1,25 @@
 ﻿@model PeerReview.ViewModels.ManageViewModel.CreateInviteViewModel
-
-<h2>Создать инвайт</h2>
+@{
+    ViewData["Title"] = "Пригласить пользователя";
+    ViewData.AddActivePage(ManageNavPages.CreateInvite);
+}
+<h4>@ViewData["Title"]</h4>
 <form method="post" asp-controller="Manage" asp-action="CreateInvite">
     <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
-        <input type="submit" value="Выслать приглашение" />
-    </div>
+    @if (@ViewBag.InvitesCount > 0)
+    {
+        <p class="text-info">У вас осталось <mark>@ViewBag.InvitesCount</mark> инвайтов.</p><br>
+        <div class="form-group">
+            <label asp-for="Email"></label><br />
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <input type="submit" value="Выслать приглашение" />
+        </div>
+    }
+    else
+    {
+        <p class="alert-info">У вас не осталось инвайтов.</p><br>
+    }
 </form>

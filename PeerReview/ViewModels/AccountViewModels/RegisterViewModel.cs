@@ -9,6 +9,7 @@ namespace PeerReview.ViewModels.AccountViewModels
         public string Invite { get; set; }
         
         [Required]
+        [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string Email { get; set; }
  

@@ -1,0 +1,136 @@
+2018-05-30T02:33:12.8815023+03:00 0HLE5NI5N86U8:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-05-30T02:33:15.5702569+03:00 0HLE5NI5N86U8:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-30T02:33:18.1938367+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("71"ms) [Parameters=["@__get_Item_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"e\".\"Id\", \"e\".\"AccessFailedCount\", \"e\".\"ConcurrencyStamp\", \"e\".\"CountInvites\", \"e\".\"Email\", \"e\".\"EmailConfirmed\", \"e\".\"LockoutEnabled\", \"e\".\"LockoutEnd\", \"e\".\"NormalizedEmail\", \"e\".\"NormalizedUserName\", \"e\".\"PasswordHash\", \"e\".\"PhoneNumber\", \"e\".\"PhoneNumberConfirmed\", \"e\".\"SecurityStamp\", \"e\".\"TwoFactorEnabled\", \"e\".\"UserName\"
+FROM \"AspNetUsers\" AS \"e\"
+WHERE \"e\".\"Id\" = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2018-05-30T02:33:18.7523595+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"uc\".\"Id\", \"uc\".\"ClaimType\", \"uc\".\"ClaimValue\", \"uc\".\"UserId\"
+FROM \"AspNetUserClaims\" AS \"uc\"
+WHERE \"uc\".\"UserId\" = @__user_Id_0" (0723d8ff)
+2018-05-30T02:33:18.9087428+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"role\".\"Name\"
+FROM \"AspNetUserRoles\" AS \"userRole\"
+INNER JOIN \"AspNetRoles\" AS \"role\" ON \"userRole\".\"RoleId\" = \"role\".\"Id\"
+WHERE \"userRole\".\"UserId\" = @__userId_0" (0723d8ff)
+2018-05-30T02:33:18.9598501+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"r\".\"Id\", \"r\".\"ConcurrencyStamp\", \"r\".\"Name\", \"r\".\"NormalizedName\"
+FROM \"AspNetRoles\" AS \"r\"
+WHERE \"r\".\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2018-05-30T02:33:19.0327045+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"rc\".\"ClaimType\", \"rc\".\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS \"rc\"
+WHERE \"rc\".\"RoleId\" = @__role_Id_0" (0723d8ff)
+2018-05-30T02:33:19.0519732+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"r\".\"Id\", \"r\".\"ConcurrencyStamp\", \"r\".\"Name\", \"r\".\"NormalizedName\"
+FROM \"AspNetRoles\" AS \"r\"
+WHERE \"r\".\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2018-05-30T02:33:19.0575161+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"rc\".\"ClaimType\", \"rc\".\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS \"rc\"
+WHERE \"rc\".\"RoleId\" = @__role_Id_0" (0723d8ff)
+2018-05-30T02:33:19.0601019+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"r\".\"Id\", \"r\".\"ConcurrencyStamp\", \"r\".\"Name\", \"r\".\"NormalizedName\"
+FROM \"AspNetRoles\" AS \"r\"
+WHERE \"r\".\"NormalizedName\" = @__normalizedName_0
+LIMIT 1" (0723d8ff)
+2018-05-30T02:33:19.0629786+03:00 0HLE5NI5N86U8:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"rc\".\"ClaimType\", \"rc\".\"ClaimValue\"
+FROM \"AspNetRoleClaims\" AS \"rc\"
+WHERE \"rc\".\"RoleId\" = @__role_Id_0" (0723d8ff)
+2018-05-30T02:33:19.0708555+03:00 0HLE5NI5N86U8:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-30T02:33:19.4513496+03:00 0HLE5NI5N86U8:00000001 [INF] Executing action method "PeerReview.Controllers.HomeController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-30T02:33:25.4199726+03:00 0HLE5NI5N86U8:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-05-30T02:33:27.3178159+03:00 0HLE5NI5N86U8:00000001 [INF] Executed action "PeerReview.Controllers.HomeController.Index (PeerReview)" in 7870.9649ms (afa2e885)
+2018-05-30T02:33:27.3281186+03:00 0HLE5NI5N86U9:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-05-30T02:33:27.3353863+03:00 0HLE5NI5N86UA:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/site.css   (ca22a1cb)
+2018-05-30T02:33:27.3435838+03:00 0HLE5NI5N86U8:00000001 [INF] Request finished in 14489.5879ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-30T02:33:27.3489855+03:00 0HLE5NI5N86U8:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-05-30T02:33:27.3677389+03:00 0HLE5NI5N86U8:00000002 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/lib/jquery/dist/jquery.js"' (27b0a520)
+2018-05-30T02:33:27.3744557+03:00 0HLE5NI5N86UA:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/css/site.css"' (27b0a520)
+2018-05-30T02:33:27.3752985+03:00 0HLE5NI5N86U9:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/lib/bootstrap/dist/css/bootstrap.css"' (27b0a520)
+2018-05-30T02:33:27.4000323+03:00 0HLE5NI5N86UA:00000001 [INF] Request finished in 64.7493ms 200 text/css (791a596a)
+2018-05-30T02:33:27.4352348+03:00 0HLE5NI5N86U9:00000001 [INF] Request finished in 105.4139ms 200 text/css (791a596a)
+2018-05-30T02:33:27.4401302+03:00 0HLE5NI5N86UA:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/site.js?v=7mkNbU1tgQL1bUeZe3j2R151hKLhLDKO4BBaR-iqCy0   (ca22a1cb)
+2018-05-30T02:33:27.4422400+03:00 0HLE5NI5N86UA:00000002 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/js/site.js"' (27b0a520)
+2018-05-30T02:33:27.4466587+03:00 0HLE5NI5N86UA:00000002 [INF] Request finished in 7.4885ms 200 application/javascript (791a596a)
+2018-05-30T02:33:27.4469106+03:00 0HLE5NI5N86U9:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-05-30T02:33:27.4479377+03:00 0HLE5NI5N86UB:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/banner1.svg   (ca22a1cb)
+2018-05-30T02:33:27.4508537+03:00 0HLE5NI5N86UC:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/banner2.svg   (ca22a1cb)
+2018-05-30T02:33:27.4519167+03:00 0HLE5NI5N86UB:00000001 [INF] Sending file. Request path: '"/images/banner1.svg"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/images/banner1.svg"' (27b0a520)
+2018-05-30T02:33:27.4524763+03:00 0HLE5NI5N86UD:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/banner3.svg   (ca22a1cb)
+2018-05-30T02:33:27.4527992+03:00 0HLE5NI5N86UC:00000001 [INF] Sending file. Request path: '"/images/banner2.svg"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/images/banner2.svg"' (27b0a520)
+2018-05-30T02:33:27.4532570+03:00 0HLE5NI5N86UD:00000001 [INF] Sending file. Request path: '"/images/banner3.svg"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/images/banner3.svg"' (27b0a520)
+2018-05-30T02:33:27.4595162+03:00 0HLE5NI5N86U9:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/lib/bootstrap/dist/js/bootstrap.js"' (27b0a520)
+2018-05-30T02:33:27.4641271+03:00 0HLE5NI5N86UA:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/banner4.svg   (ca22a1cb)
+2018-05-30T02:33:27.4645995+03:00 0HLE5NI5N86UA:00000003 [INF] Sending file. Request path: '"/images/banner4.svg"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/images/banner4.svg"' (27b0a520)
+2018-05-30T02:33:27.4869566+03:00 0HLE5NI5N86UA:00000003 [INF] Request finished in 22.9696ms 200 image/svg+xml (791a596a)
+2018-05-30T02:33:27.4870589+03:00 0HLE5NI5N86UC:00000001 [INF] Request finished in 36.4863ms 200 image/svg+xml (791a596a)
+2018-05-30T02:33:27.4875244+03:00 0HLE5NI5N86UB:00000001 [INF] Request finished in 39.7921ms 200 image/svg+xml (791a596a)
+2018-05-30T02:33:27.4889801+03:00 0HLE5NI5N86UD:00000001 [INF] Request finished in 37.0663ms 200 image/svg+xml (791a596a)
+2018-05-30T02:33:27.5127694+03:00 0HLE5NI5N86UD:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-05-30T02:33:27.5132463+03:00 0HLE5NI5N86UD:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-05-30T02:33:27.5217704+03:00 0HLE5NI5N86U8:00000002 [INF] Request finished in 172.3698ms 200 application/javascript (791a596a)
+2018-05-30T02:33:27.5256888+03:00 0HLE5NI5N86U9:00000002 [INF] Request finished in 81.5179ms 200 application/javascript (791a596a)
+2018-05-30T02:33:27.5338818+03:00 0HLE5NI5N86UD:00000002 [INF] Request finished in 21.2723ms 200 font/woff2 (791a596a)
+2018-05-30T02:33:27.8561158+03:00 0HLE5NI5N86UD:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-05-30T02:33:27.8565672+03:00 0HLE5NI5N86UD:00000003 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/favicon.ico"' (27b0a520)
+2018-05-30T02:33:27.8952687+03:00 0HLE5NI5N86UD:00000003 [INF] Request finished in 39.2113ms 200 image/x-icon (791a596a)
+2018-05-30T02:35:26.5636111+03:00 0HLE5NI5N86UD:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Manage/Index   (ca22a1cb)
+2018-05-30T02:35:26.5812076+03:00 0HLE5NI5N86UD:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-30T02:35:26.6340067+03:00 0HLE5NI5N86UD:00000004 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-30T02:35:26.6458774+03:00 0HLE5NI5N86UD:00000004 [INF] Executing action method "PeerReview.Controllers.ManageController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-30T02:35:26.6640023+03:00 0HLE5NI5N86UD:00000004 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-30T02:35:26.6703171+03:00 0HLE5NI5N86UD:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"e\".\"Id\", \"e\".\"AccessFailedCount\", \"e\".\"ConcurrencyStamp\", \"e\".\"CountInvites\", \"e\".\"Email\", \"e\".\"EmailConfirmed\", \"e\".\"LockoutEnabled\", \"e\".\"LockoutEnd\", \"e\".\"NormalizedEmail\", \"e\".\"NormalizedUserName\", \"e\".\"PasswordHash\", \"e\".\"PhoneNumber\", \"e\".\"PhoneNumberConfirmed\", \"e\".\"SecurityStamp\", \"e\".\"TwoFactorEnabled\", \"e\".\"UserName\"
+FROM \"AspNetUsers\" AS \"e\"
+WHERE \"e\".\"Id\" = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2018-05-30T02:35:27.5187869+03:00 0HLE5NI5N86UD:00000004 [INF] Executing ViewResult, running view at path "/Views/Manage/Index.cshtml". (9707eebe)
+2018-05-30T02:35:30.2350549+03:00 0HLE5NI5N86UD:00000004 [INF] Executed action "PeerReview.Controllers.ManageController.Index (PeerReview)" in 3620.8072ms (afa2e885)
+2018-05-30T02:35:30.2379279+03:00 0HLE5NI5N86UD:00000004 [INF] Request finished in 3674.507ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-30T02:35:30.2618772+03:00 0HLE5NI5N86UD:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-05-30T02:35:30.2623724+03:00 0HLE5NI5N86UD:00000005 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/lib/jquery-validation/dist/jquery.validate.js"' (27b0a520)
+2018-05-30T02:35:30.2653090+03:00 0HLE5NI5N86UE:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-05-30T02:35:30.2659207+03:00 0HLE5NI5N86UE:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"/home/mister/Yandex.Disk/0_ВУЗ/2 КУРС/2_С#/PeerReview/PeerReview/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"' (27b0a520)
+2018-05-30T02:35:30.3020871+03:00 0HLE5NI5N86UE:00000001 [INF] Request finished in 37.5311ms 200 application/javascript (791a596a)
+2018-05-30T02:35:30.3215754+03:00 0HLE5NI5N86UD:00000005 [INF] Request finished in 59.8535ms 200 application/javascript (791a596a)
+2018-05-30T02:36:16.0230412+03:00 0HLE5NI5N86UD:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Manage/CreateInvite   (ca22a1cb)
+2018-05-30T02:36:16.0241800+03:00 0HLE5NI5N86UD:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-30T02:36:16.0464389+03:00 0HLE5NI5N86UD:00000006 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-30T02:36:16.0481280+03:00 0HLE5NI5N86UD:00000006 [INF] Executing action method "PeerReview.Controllers.ManageController.CreateInvite (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-30T02:36:16.4989217+03:00 0HLE5NI5N86UD:00000006 [INF] Executing ViewResult, running view at path "/Views/Manage/CreateInvite.cshtml". (9707eebe)
+2018-05-30T02:36:16.5340797+03:00 0HLE5NI5N86UD:00000006 [INF] Executed action "PeerReview.Controllers.ManageController.CreateInvite (PeerReview)" in 491.8826ms (afa2e885)
+2018-05-30T02:36:16.5354927+03:00 0HLE5NI5N86UD:00000006 [INF] Request finished in 512.6062ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-30T02:36:22.7791555+03:00 0HLE5NI5N86UD:00000007 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5000/Manage/CreateInvite application/x-www-form-urlencoded 257 (ca22a1cb)
+2018-05-30T02:36:22.7802351+03:00 0HLE5NI5N86UD:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-30T02:36:22.8246997+03:00 0HLE5NI5N86UD:00000007 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-30T02:36:22.9571256+03:00 0HLE5NI5N86UD:00000007 [INF] Executing action method "PeerReview.Controllers.ManageController.CreateInvite (PeerReview)" with arguments (["PeerReview.ViewModels.ManageViewModel.CreateInviteViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-05-30T02:36:22.9661472+03:00 0HLE5NI5N86UD:00000007 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-30T02:36:23.0483421+03:00 0HLE5NI5N86UD:00000007 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN @__p_0 IN (
+        SELECT \"x\".\"Email\"
+        FROM \"AspNetUsers\" AS \"x\"
+    )
+    THEN TRUE::bool ELSE FALSE::bool
+END" (0723d8ff)
+2018-05-30T02:36:23.0579669+03:00 0HLE5NI5N86UD:00000007 [INF] Executing RedirectResult, redirecting to "/Manage/Index". (d98d540e)
+2018-05-30T02:36:23.0609561+03:00 0HLE5NI5N86UD:00000007 [INF] Executed action "PeerReview.Controllers.ManageController.CreateInvite (PeerReview)" in 236.4365ms (afa2e885)
+2018-05-30T02:36:23.0644414+03:00 0HLE5NI5N86UD:00000007 [INF] Request finished in 285.4917ms 302  (791a596a)
+2018-05-30T02:36:23.0675261+03:00 0HLE5NI5N86UD:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Manage/Index   (ca22a1cb)
+2018-05-30T02:36:23.0686058+03:00 0HLE5NI5N86UD:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-30T02:36:23.0693239+03:00 0HLE5NI5N86UD:00000008 [INF] Authorization was successful for user: "m.k-mister@yandex.ru". (d7eb274a)
+2018-05-30T02:36:23.0698178+03:00 0HLE5NI5N86UD:00000008 [INF] Executing action method "PeerReview.Controllers.ManageController.Index (PeerReview)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-30T02:36:23.0709140+03:00 0HLE5NI5N86UD:00000008 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2018-05-30T02:36:23.0751424+03:00 0HLE5NI5N86UD:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"e\".\"Id\", \"e\".\"AccessFailedCount\", \"e\".\"ConcurrencyStamp\", \"e\".\"CountInvites\", \"e\".\"Email\", \"e\".\"EmailConfirmed\", \"e\".\"LockoutEnabled\", \"e\".\"LockoutEnd\", \"e\".\"NormalizedEmail\", \"e\".\"NormalizedUserName\", \"e\".\"PasswordHash\", \"e\".\"PhoneNumber\", \"e\".\"PhoneNumberConfirmed\", \"e\".\"SecurityStamp\", \"e\".\"TwoFactorEnabled\", \"e\".\"UserName\"
+FROM \"AspNetUsers\" AS \"e\"
+WHERE \"e\".\"Id\" = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2018-05-30T02:36:23.0760838+03:00 0HLE5NI5N86UD:00000008 [INF] Executing ViewResult, running view at path "/Views/Manage/Index.cshtml". (9707eebe)
+2018-05-30T02:36:23.0859117+03:00 0HLE5NI5N86UD:00000008 [INF] Executed action "PeerReview.Controllers.ManageController.Index (PeerReview)" in 16.5283ms (afa2e885)
+2018-05-30T02:36:23.0864618+03:00 0HLE5NI5N86UD:00000008 [INF] Request finished in 19.1133ms 200 text/html; charset=utf-8 (791a596a)

@@ -5,6 +5,7 @@ namespace PeerReview.ViewModels.AccountViewModels
     public class LoginViewModel
     {
         [Required]
+        [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string Email { get; set; }
          

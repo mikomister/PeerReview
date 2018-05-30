@@ -19,7 +19,7 @@ namespace PeerReview.Models
 
         public int UserId { get; set; }
         public User User { get; set; }
-
+        
         private string GenerateInvite(string key, User user)
         {
             var toEncrypt = key + user.ConcurrencyStamp + user.Email + new Random().NextDouble() * 100 +

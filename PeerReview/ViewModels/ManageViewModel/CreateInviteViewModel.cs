@@ -6,6 +6,7 @@ namespace PeerReview.ViewModels.ManageViewModel
     {
         [Required]
         [Display(Name = "Email")]
+        [EmailAddress]
         public string Email { get; set; }
     }
 }

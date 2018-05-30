@@ -205,6 +205,8 @@ namespace PeerReview.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateInvite()
         {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.InvitesCount = user.InvitesCount;
             return View();
         }
 
@@ -216,13 +218,13 @@ namespace PeerReview.Controllers
             {
                 if (CheckMailExistense(model.Email))
                 {
-                    var invite = new Invite(_db.Users.FirstOrDefault(x => x.Id == _userManager.GetUserId(User)));
+                    var user = await _userManager.GetUserAsync(User);
+                    var invite = new Invite(user);
                     _db.Invites.Add(invite);
                     _db.SaveChanges();
                 
                     var emailService = new EmailSender();
-                    await emailService.SendEmailAsync(model.Email, 
-                        "Приглашение на  PeerReview", $"Вы можете зарегистрироваться на PeerReview.com по ссылке: http://PeerReview.com/Account/Register/{invite.InviteCode}");
+                    await emailService.SendEmailAsync(model.Email, "You given invite at PeerReview.com", $"Your invite code: {invite.InviteCode}");
                 }
                return RedirectToAction("Index", "Manage");
             }

@@ -8,11 +8,12 @@ namespace PeerReview.Models
 {
     public class User : IdentityUser
     {
-        public int CountInvites { get; set; }
+        public int InvitesCount { get; set; }
         
         [NotMapped]
         private const double Balancer = 100000;
-        
+
+        public List<Invite> Invites;
         public List<Submission> Submissions;
         public List<Review> Reviews;
         

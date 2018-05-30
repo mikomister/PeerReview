@@ -78,24 +78,26 @@ namespace PeerReview.Controllers
                 var invite = _db.Invites.FirstOrDefault((i) => i.InviteCode == model.Invite);
         
             if(ModelState.IsValid && invite!=null)
-//            if(ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email, CountInvites = 3,  };
-                // добавляем пользователя
+                User user = new User { Email = model.Email, UserName = model.Email, InvitesCount = 3,  };
                 var result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                var addToRoleAsync = await _userManager.AddToRoleAsync(user, "student");
+                if (result.Succeeded && addToRoleAsync.Succeeded)
                 {
-                    _userManager.AddToRoleAsync(user, "student");
-                    // установка куки
-                    await _signInManager.SignInAsync(user, false);
-                    invite.User.CountInvites--;
-                    _db.Invites.Remove(invite);
-                    _db.SaveChanges();
-                    return RedirectToAction("Index", "Home");
+                        // установка куки
+                        await _signInManager.SignInAsync(user, false);
+                        invite.User.InvitesCount--;
+                        _db.Invites.Remove(invite);
+                        _db.SaveChanges();
+                        return RedirectToAction("Index", "Home");
                 }
                 else
                 {
                     foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                    foreach (var error in addToRoleAsync.Errors)
                     {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }

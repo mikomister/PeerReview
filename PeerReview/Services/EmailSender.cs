@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using MailKit.Net.Smtp;
+using MailKit;
 using MimeKit;
 
 namespace PeerReview.Services
@@ -13,24 +18,35 @@ namespace PeerReview.Services
     {
         public async Task SendEmailAsync(string email, string subject, string message)
         {
-            var emailMessage = new MimeMessage();
+            MailMessage emailMessage = new MailMessage();
 
-            emailMessage.From.Add(new MailboxAddress("Администрация сайта", "m.k-mister@yandex.ru"));
-            emailMessage.To.Add(new MailboxAddress("", email));
+            emailMessage.From = new MailAddress("net.konkov.11@gmail.com");
+            emailMessage.To.Add(new MailAddress(email));
             emailMessage.Subject = subject;
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
+            emailMessage.SubjectEncoding = Encoding.UTF8;
+            emailMessage.Priority = MailPriority.High;
+            emailMessage.IsBodyHtml = false;
+            emailMessage.Body = message;
+            var client = new SmtpClient("smtp.gmail.com");
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Timeout = 10000;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.Credentials = new NetworkCredential("net.konkov.11@gmail.com", "agtxjet*0sp23_");
+            client.SendCompleted += (s, e) =>
             {
-                Text = message
+                if (e.Error == null)
+                {
+                    client.Dispose();
+                    emailMessage.Dispose();
+                }
+                else
+                {
+                    throw new SmtpException($"Message not sended! {e.Error.Message}");
+                }
             };
-
-            using (var client = new SmtpClient())
-            {
-                await client.ConnectAsync("smtp.yandex.ru", 587, false);
-                await client.AuthenticateAsync("m.k-mister@yandex.ru", "password");
-                await client.SendAsync(emailMessage);
-
-                await client.DisconnectAsync(true);
-            }
+            await client.SendMailAsync(emailMessage);
         }
     }
 }
